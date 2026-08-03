@@ -104,10 +104,6 @@
     background:#161217;
     border-radius:34px;
     overflow:hidden;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:20px 22px 30px;
   }
 
   .cam{
@@ -120,6 +116,229 @@
     background:#000;
     border:2px solid #333;
     border-radius:50%;
+    z-index:5;
+  }
+
+  /* ---- Sistema de páginas dentro do mockup ---- */
+  .page{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    overflow-y:auto;
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+    transition:transform .4s ease;
+    background:#161217;
+  }
+  .page::-webkit-scrollbar{ display:none; }
+
+  .page-home{
+    padding:20px 22px 30px;
+    transform:translateX(0);
+  }
+
+  .page-about{
+    align-items:stretch;
+    padding:18px 16px 34px;
+    transform:translateX(100%);
+  }
+
+  .screen.show-about .page-home{ transform:translateX(-100%); }
+  .screen.show-about .page-about{ transform:translateX(0); }
+
+  /* ---- Header da tela "Sobre mim" ---- */
+  .about-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:16px;
+    flex-shrink:0;
+  }
+  .about-header .back{
+    color:#fff;
+    font-size:17px;
+    cursor:pointer;
+    width:20px;
+    line-height:1;
+    background:none;
+    border:none;
+  }
+  .about-header .title{
+    color:#fff;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:0.3px;
+  }
+  .about-header .menu{
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+    cursor:pointer;
+    width:16px;
+  }
+  .about-header .menu span{
+    display:block;
+    width:16px;
+    height:2px;
+    background:#fff;
+    border-radius:2px;
+  }
+
+  .about-intro{
+    color:#eee;
+    font-size:10.5px;
+    line-height:1.55;
+    margin-bottom:18px;
+    font-weight:600;
+  }
+
+  .section-title{
+    color:#fff;
+    font-size:11.5px;
+    font-weight:600;
+    margin-bottom:10px;
+  }
+
+  .method-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin-bottom:20px;
+  }
+  .method-card{
+    background:#232128;
+    border-radius:12px;
+    padding:10px;
+  }
+  .method-icon{
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:rgba(255,46,138,0.15);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:8px;
+  }
+  .method-icon svg{ width:14px; height:14px; }
+  .method-card h4{
+    color:#fff;
+    font-size:9.5px;
+    font-weight:700;
+    margin-bottom:4px;
+    line-height:1.25;
+  }
+  .method-card p{
+    color:#9a9a9f;
+    font-size:8px;
+    line-height:1.4;
+  }
+
+  .tools-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+  }
+  .tool{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:18%;
+  }
+  .tool-icon{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:5px;
+    font-size:8px;
+    font-weight:800;
+  }
+  .tool span{
+    color:#ccc;
+    font-size:7px;
+    text-align:center;
+    line-height:1.2;
+  }
+
+  .cert-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+  }
+  .cert-header a{
+    color:var(--pink);
+    font-size:9px;
+    text-decoration:underline;
+  }
+  .cert-item{
+    display:flex;
+    gap:8px;
+    background:#1d1b21;
+    border-radius:10px;
+    padding:8px;
+    margin-bottom:8px;
+    align-items:center;
+  }
+  .cert-info h5{
+    color:#fff;
+    font-size:9.5px;
+    font-weight:700;
+    margin-bottom:3px;
+    line-height:1.3;
+  }
+  .cert-info p{
+    color:#9a9a9f;
+    font-size:8px;
+  }
+  .cert-thumb{
+    width:42px;
+    height:52px;
+    border-radius:4px;
+    flex-shrink:0;
+    background:linear-gradient(160deg,#fff,#e3e3f2);
+  }
+
+  .contact-box{
+    border:1px solid #35333a;
+    border-radius:14px;
+    padding:12px;
+    margin-top:4px;
+  }
+  .field{ margin-bottom:10px; }
+  .field label{
+    display:block;
+    color:#8a8a8f;
+    font-size:8px;
+    margin-bottom:4px;
+  }
+  .field input, .field textarea{
+    width:100%;
+    background:transparent;
+    border:1px solid #45434a;
+    border-radius:8px;
+    padding:7px 8px;
+    color:#eee;
+    font-size:9px;
+    font-family:inherit;
+  }
+  .field textarea{ resize:none; height:50px; }
+  .submit-btn{
+    width:100%;
+    background:var(--pink);
+    color:#fff;
+    border:none;
+    border-radius:20px;
+    padding:9px 0;
+    font-size:10px;
+    font-weight:700;
+    margin-top:4px;
+    cursor:pointer;
   }
 
   .logo{
@@ -249,8 +468,10 @@
   </div>
 
   <div class="phone">
-    <div class="screen">
+    <div class="screen" id="screen">
       <div class="cam"></div>
+
+      <div class="page page-home">
       <div class="logo">GM.</div>
 
       <div class="avatar-wrap">
@@ -262,12 +483,173 @@
 
       <div class="buttons">
         <button class="btn btn-primary">Ver projetos</button>
-        <button class="btn btn-outline">Sobre mim</button>
+        <button class="btn btn-outline" onclick="showAbout()">Sobre mim</button>
       </div>
+      </div>
+
+      <div class="page page-about">
+        <div class="about-header">
+          <button class="back" onclick="showHome()">&#8592;</button>
+          <div class="title">Sobre mim</div>
+          <div class="menu"><span></span><span></span><span></span></div>
+        </div>
+
+        <p class="about-intro">Olá, sou UI/UX designer apaixonada por criar soluções que impactam positivamente na vida das pessoas.</p>
+
+        <div class="section-title">Metodologia</div>
+        <div class="method-grid">
+          <div class="method-card">
+            <div class="method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ff2e8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="8"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+                <line x1="12" y1="1" x2="12" y2="4"></line>
+                <line x1="12" y1="20" x2="12" y2="23"></line>
+                <line x1="1" y1="12" x2="4" y2="12"></line>
+                <line x1="20" y1="12" x2="23" y2="12"></line>
+              </svg>
+            </div>
+            <h4>Foco em usuário</h4>
+            <p>Coloco pessoas no centro de cada decisão do design</p>
+          </div>
+
+          <div class="method-card">
+            <div class="method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ff2e8a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 3a3 3 0 0 0-3 3v1a3 3 0 0 0-2 5 3 3 0 0 0 2 5v1a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"></path>
+                <path d="M15 3a3 3 0 0 1 3 3v1a3 3 0 0 1 2 5 3 3 0 0 1-2 5v1a3 3 0 0 1-6 0"></path>
+              </svg>
+            </div>
+            <h4>Pensamento estratégico</h4>
+            <p>Combino dados e pesquisas para solucionar</p>
+          </div>
+
+          <div class="method-card">
+            <div class="method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ff2e8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="20" x2="14" y2="10"></line>
+                <path d="M19 4l.9 2.1L22 7l-2.1.9L19 10l-.9-2.1L16 7l2.1-.9L19 4z"></path>
+              </svg>
+            </div>
+            <h4>Design com propósito</h4>
+            <p>Acredito que design bonito é o funcional e transformador.</p>
+          </div>
+
+          <div class="method-card">
+            <div class="method-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ff2e8a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H12V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"></path>
+                <path d="M20 19.5a2.5 2.5 0 0 0-2.5-2.5H12V4h5.5A2.5 2.5 0 0 1 20 6.5v13z"></path>
+              </svg>
+            </div>
+            <h4>Em constante aprendizado</h4>
+            <p>Sempre aprendendo para entregar melhor</p>
+          </div>
+        </div>
+
+        <div class="section-title">Ferramentas</div>
+        <div class="tools-row">
+          <div class="tool">
+            <div class="tool-icon" style="background:#181818; border:1px solid #333;">
+              <svg viewBox="0 0 24 24" width="16" height="16"><path fill="#fff" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.43-2.71 5.4-5.29 5.69.42.36.79 1.07.79 2.16 0 1.56-.02 2.81-.02 3.19 0 .3.21.66.8.55A10.51 10.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+            </div>
+            <span>Github</span>
+          </div>
+          <div class="tool">
+            <div class="tool-icon" style="background:#fff;">
+              <svg viewBox="0 0 38 57" width="15" height="15">
+                <path fill="#0acf83" d="M19 57c5.247 0 9.5-4.253 9.5-9.5V38H19c-5.247 0-9.5 4.253-9.5 9.5S13.753 57 19 57z"/>
+                <path fill="#a259ff" d="M9.5 38H19V19H9.5C4.253 19 0 23.253 0 28.5S4.253 38 9.5 38z"/>
+                <path fill="#f24e1e" d="M9.5 19H19V0H9.5C4.253 0 0 4.253 0 9.5S4.253 19 9.5 19z"/>
+                <path fill="#ff7262" d="M19 0v19h9.5c5.247 0 9.5-4.253 9.5-9.5S33.747 0 28.5 0H19z"/>
+                <path fill="#1abcfe" d="M38 28.5c0 5.247-4.253 9.5-9.5 9.5S19 33.747 19 28.5s4.253-9.5 9.5-9.5 9.5 4.253 9.5 9.5z"/>
+              </svg>
+            </div>
+            <span>Figma</span>
+          </div>
+          <div class="tool">
+            <div class="tool-icon" style="background:#1a1a1a;">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="#2489ca" d="M17.6 1.4l-6.9 6.4-4.4-3.3-2 1 4.2 4.5-4.2 4.5 2 1 4.4-3.3 6.9 6.4 4-1.9V3.3l-4-1.9z"/>
+                <path fill="#fff" d="M17.6 6.6L9.9 12l7.7 5.4V6.6z" opacity=".55"/>
+              </svg>
+            </div>
+            <span>VS Code</span>
+          </div>
+          <div class="tool">
+            <div class="tool-icon" style="background:#1769ff;">
+              <svg viewBox="0 0 24 24" width="17" height="17">
+                <text x="12" y="16.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="800" font-style="normal" fill="#fff">Bē</text>
+              </svg>
+            </div>
+            <span>Behance</span>
+          </div>
+          <div class="tool">
+            <div class="tool-icon" style="background:#ffd02f; border-radius:9px; width:26px; height:26px;">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path fill="#111" d="M2,2 L7,2 L13,12 L7,22 L2,22 L6,12 Z M8.3,2 L13.3,2 L19.3,12 L13.3,22 L8.3,22 L12.3,12 Z M14.6,2 L19.6,2 L24,12 L19.6,22 L14.6,22 L18.6,12 Z"/>
+              </svg>
+            </div>
+            <span>Miro</span>
+          </div>
+        </div>
+
+        <div class="cert-header">
+          <div class="section-title" style="margin-bottom:0;">Certificações</div>
+          <a href="#">Ver mais</a>
+        </div>
+        <div class="cert-item">
+          <div class="cert-info" style="flex:1;">
+            <h5>Especialização em UI UX</h5>
+            <p>Faculdade de Tecnologia Rockseat - 02/26</p>
+          </div>
+          <div class="cert-thumb"></div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-info" style="flex:1;">
+            <h5>Gerenciamento de áreas cibernéticas</h5>
+            <p>Cisco Networking Academy - 09/25</p>
+          </div>
+          <div class="cert-thumb"></div>
+        </div>
+
+        <div class="section-title" style="margin-top:8px;">Contato</div>
+        <div class="contact-box">
+          <div class="field">
+            <label>Nome</label>
+            <input type="text" placeholder="Nome">
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" placeholder="E-mail">
+          </div>
+          <div class="field">
+            <label>Message</label>
+            <textarea placeholder="Mensagem"></textarea>
+          </div>
+          <button class="submit-btn" type="button">Submit</button>
+        </div>
+      </div>
+
     </div>
   </div>
 
 </div>
+
+<script>
+  function showAbout(){
+    var screen = document.getElementById('screen');
+    screen.classList.add('show-about');
+    var about = screen.querySelector('.page-about');
+    about.scrollTop = 0;
+  }
+  function showHome(){
+    var screen = document.getElementById('screen');
+    screen.classList.remove('show-about');
+    var home = screen.querySelector('.page-home');
+    home.scrollTop = 0;
+  }
+</script>
 
 </body>
 </html>
