@@ -179,19 +179,3 @@
         contactSubmitBtn.textContent = 'Submit';
       });
   });
-
-function abrirSkillUp() {
-    document
-        .getElementById("skillupModal")
-        .classList.add("active");
-
-    document.body.style.overflow = "hidden";
-}
-
-function fecharSkillUp() {
-    document
-        .getElementById("skillupModal")
-        .classList.remove("active");
-
-    document.body.style.overflow = "";
-}
