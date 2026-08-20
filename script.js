@@ -1,4 +1,4 @@
-  function showAbout(){
+   function showAbout(){
     var screen = document.getElementById('screen');
     screen.classList.add('show-about');
     var about = screen.querySelector('.page-about');
