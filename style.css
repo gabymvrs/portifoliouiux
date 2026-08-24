@@ -1116,3 +1116,24 @@
     transform:translateY(0);
   }
 
+  /* Exemplo para a classe que engloba o seu celular simulado */
+.moldura-celular {
+  width: 90%;          /* Ocupa 90% da largura da tela do celular */
+  max-width: 380px;    /* Nunca passa de 380px para não ficar gigante em tablets */
+  height: auto;
+  margin: 0 auto;      /* Centraliza na tela */
+}
+
+/* 2. Media Query sempre por último */
+@media (max-width: 768px) {
+  .moldura-celular {
+    width: 90% !important;
+    max-width: 380px !important;
+    margin: 20px auto;
+  }
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
