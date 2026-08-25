@@ -22,4 +22,8 @@ Repositório do meu portfólio pessoal, desenvolvido para apresentar trabalhos d
 ## 🌐 Acesse
 
 **Portfólio:** https://portifoliouiux.vercel.app/
+
+📄 Licença
+
+Este projeto é um portfólio pessoal. Os conteúdos, projetos, imagens e materiais apresentados não devem ser reutilizados sem autorização.
  
