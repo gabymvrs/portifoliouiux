@@ -74,31 +74,39 @@
     }
   }
   
-  function abrirDocumentacao(){
-    var id = window.projetoAtualId;
-    
-    if(id === 'skillup'){
-      // Baixar PDF do SkillUp
-      var link = document.createElement('a');
-      link.href = 'Case_study_UIUX__1_.pdf';
-      link.download = 'SkillUp_Case_Study_UI_UX.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } else if(id === 'meunutri'){
-      // Baixar PDF do MeuNutri
-      var link = document.createElement('a');
-      link.href = 'MeuNutri.pdf';
-      link.download = 'MeuNutri_Documentacao.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } else if(id === 'portfolio'){
-      window.open('https://17062010.oneapp.dev/', '_blank');
-    } else {
-      alert('Link não disponível para este projeto.');
-    }
+  function abrirDocumentacao() {
+  var id = window.projetoAtualId;
+
+  if (id === 'skillup') {
+
+    var link = document.createElement('a');
+    link.href = './Case_study_UIUX__1_.pdf';
+    link.download = 'Case_study_UIUX__1_.pdf';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+  } else if (id === 'meunutri') {
+
+    var link = document.createElement('a');
+    link.href = './MeuNutri.pdf';
+    link.download = 'MeuNutri_Documentacao.pdf';
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+  } else if (id === 'portfolio') {
+
+    window.open('https://17062010.oneapp.dev/', '_blank');
+
+  } else {
+
+    alert('Link não disponível para este projeto.');
+
   }
+}
   
   function filtrarProjetos(cat, e){
     var chips = document.querySelectorAll('.filter-chip');
