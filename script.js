@@ -43,7 +43,7 @@
       docBtn.textContent = 'Ver Documentação';
       docBtn.style.display = 'block';
       window.projetoAtualId = id;
-    } else if(id === 'portfolio'){
+    } else if(id === 'portfolio' || id === 'musashi'){
       docBtn.textContent = 'Ver Projeto';
       docBtn.style.display = 'block';
       window.projetoAtualId = id;
@@ -96,6 +96,10 @@
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+
+  } else if (id === 'musashi') {
+
+    window.open('https://muusashi-igarassu.vercel.app/', '_blank', 'noopener,noreferrer');
 
   } else if (id === 'portfolio') {
 
