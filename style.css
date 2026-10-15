@@ -1202,3 +1202,23 @@ img, video {
 .page-projeto-detalhes .ver-doc-btn{
   width:100%;
 }
+
+
+/* Padronização de espaçamento entre blocos e cards nos detalhes */
+.page-projeto-detalhes .projeto-info-cards{
+  gap:12px;
+  margin:24px 0 28px;
+}
+.page-projeto-detalhes .info-card{
+  margin:0;
+}
+.page-projeto-detalhes .projeto-sobre,
+.page-projeto-detalhes .projeto-problema,
+.page-projeto-detalhes .projeto-solucao{
+  margin-top:0;
+  margin-bottom:28px;
+}
+.page-projeto-detalhes .ver-doc-btn{
+  margin-top:24px;
+  margin-bottom:28px;
+}
