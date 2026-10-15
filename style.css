@@ -1246,46 +1246,11 @@ img, video {
 }
 
 
-/* Menu Sobre mim — maior, mais legível e destacado */
-.page-about .menu{
-  width:40px;
-  height:40px;
-  padding:9px;
-  box-sizing:border-box;
-  border-radius:10px;
-  background:#2b2930;
-  border:1px solid #3b3941;
-}
-.page-about .menu span{
-  width:100%;
-  height:2px;
-}
-.page-about .menu-dropdown{
-  width:220px;
-  padding:12px;
-  border-radius:14px;
-  background:#242329;
-  border:1px solid #3a3840;
-  box-shadow:0 14px 34px rgba(0,0,0,.45);
-}
+/* Melhora somente a visibilidade dos textos do menu Sobre mim */
 .page-about .menu-dropdown button{
-  width:100%;
-  min-height:42px;
-  padding:11px 12px;
-  font-size:13px;
+  color:#fff !important;
   font-weight:600;
-  border-radius:9px;
-  text-align:left;
-}
-.page-about .menu-dropdown button:hover{
-  background:#302e35;
 }
 .page-about .menu-dropdown .group-label{
-  padding:10px 12px 6px;
-  font-size:10px;
-  font-weight:700;
-  letter-spacing:1px;
-}
-.page-about .menu-dropdown .divider{
-  margin:8px 4px;
+  color:#d7d5dc !important;
 }
