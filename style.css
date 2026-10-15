@@ -1222,3 +1222,25 @@ img, video {
   margin-top:24px;
   margin-bottom:28px;
 }
+
+
+/* Impede overflow horizontal sem alterar a largura da tela */
+.page-projeto-detalhes,
+.page-projeto-detalhes .projeto-detalhes-content{
+  overflow-x:hidden !important;
+}
+.page-projeto-detalhes .projeto-info-cards{
+  width:100%;
+  max-width:100%;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+}
+.page-projeto-detalhes .info-card{
+  min-width:0;
+  width:auto;
+  overflow:hidden;
+}
+.page-projeto-detalhes .info-valor,
+.page-projeto-detalhes .info-label{
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
