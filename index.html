@@ -266,8 +266,14 @@
         <div class="projetos-header">
           <button class="back" onclick="showHome()">&#8592;</button>
           <div class="title">Projetos</div>
-          <div class="menu"><span></span><span></span><span></span></div>
+          <div class="menu" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Abrir menu"><span></span><span></span><span></span></div>
+          <div class="menu-dropdown">
+            <button onclick="showHome(); closeMenu();">Início</button>
+            <button onclick="showAbout(); closeMenu();">Sobre mim</button>
+            <button onclick="showProjetos(); closeMenu();">Projetos</button>
+          </div>
         </div>
+        <div class="menu-overlay" onclick="closeMenu()"></div>
         <div class="projetos-content">
           <div class="filter-row">
             <button class="filter-chip active" onclick="filtrarProjetos('todos', event)">Todos</button>
