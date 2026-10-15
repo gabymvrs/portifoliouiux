@@ -1182,3 +1182,23 @@ img, video {
   object-fit:cover;
   display:block;
 }
+
+
+/* Respiro lateral real na tela de detalhes */
+.page-projeto-detalhes .projeto-detalhes-content{
+  box-sizing:border-box;
+  width:100%;
+  padding:24px 24px 32px !important;
+}
+.page-projeto-detalhes .projeto-imagem,
+.page-projeto-detalhes .ver-doc-btn,
+.page-projeto-detalhes .projeto-info-cards,
+.page-projeto-detalhes .projeto-sobre,
+.page-projeto-detalhes .projeto-problema,
+.page-projeto-detalhes .projeto-solucao{
+  box-sizing:border-box;
+  max-width:100%;
+}
+.page-projeto-detalhes .ver-doc-btn{
+  width:100%;
+}
