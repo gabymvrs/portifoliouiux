@@ -134,22 +134,23 @@
     closeMenu();
   }
   function toggleMenu(){
-    var btn = document.getElementById('menuBtn');
-    var dropdown = document.getElementById('menuDropdown');
-    var overlay = document.getElementById('menuOverlay');
+    var page = document.querySelector('#screen .page-about[style*="display: flex"], #screen.show-about .page-about, #screen.show-projetos .page-projetos') || document.querySelector('#screen .page-about');
+    var dropdown = page ? page.querySelector('.menu-dropdown') : null;
+    var btn = page ? page.querySelector('.menu') : null;
+    var overlay = page ? page.querySelector('.menu-overlay') : null;
+    if(!dropdown || !btn || !overlay) return;
     var isOpen = dropdown.classList.contains('open');
-    if(isOpen){
-      closeMenu();
-    } else {
+    closeMenu();
+    if(!isOpen){
       btn.classList.add('open');
       dropdown.classList.add('open');
       overlay.classList.add('open');
     }
   }
   function closeMenu(){
-    document.getElementById('menuBtn').classList.remove('open');
-    document.getElementById('menuDropdown').classList.remove('open');
-    document.getElementById('menuOverlay').classList.remove('open');
+    document.querySelectorAll('.menu.open').forEach(function(el){ el.classList.remove('open'); });
+    document.querySelectorAll('.menu-dropdown.open').forEach(function(el){ el.classList.remove('open'); });
+    document.querySelectorAll('.menu-overlay.open').forEach(function(el){ el.classList.remove('open'); });
   }
   function scrollToSection(id){
     closeMenu();
